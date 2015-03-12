@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>TahDah</title>
+		<link rel="stylesheet" href="./assets/base.css">
+	</head>
+	<body>
+		<section id="todoapp">
+			<header id="header">
+				<h1>TahDah</h1>
+				<input id="new-todo" placeholder="What needs to be done?" autofocus>
+			</header>
+			<section id="main">
+				<ul id="todo-list">
+					<!--
+					<li>
+					<div class="view">
+					<input class="toggle" type="checkbox">
+					<label>Foo</label>
+					</div>
+					</li>
+					-->
+					<script type="text/template" data-template="todoItem">
+						<li class="{{classes}}" todo-id="{{id}}">
+						<input class="toggle" type="checkbox" {{checked}}>
+						<label>{{title}}</label>
+						</li>
+					</script>
+				</ul>
+			</section>
+			<footer id="footer"></footer>
+		</section>
+		<footer id="info">
+			<p>
+				HTML and CSS shamelessly ripped from <a href="http://todomvc.com">TodoMVC</a>
+			</p>
+		</footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="todo.js"></script>
+	</body>
+</html>
