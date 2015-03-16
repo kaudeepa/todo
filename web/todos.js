@@ -21,7 +21,7 @@ $(function() {
             data.push(obj);
             dbStorage.todos = JSON.stringify(data);
             // save data to db.
-            this.save(dbStorage);
+            this.save(data);
         },
 
         save : function(data) {
@@ -80,7 +80,8 @@ $(function() {
 
         getAllTodos : function() {
             // fetch data from db.
-            return JSON.parse(dbStorage.todos);
+            var data = JSON.parse(dbStorage.todos);
+            return data;
         }
     };
 
