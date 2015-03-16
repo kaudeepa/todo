@@ -7,7 +7,7 @@ $(function() {
             dbStorage.todos = JSON.stringify([]);
             $.getJSON(rootURL + 'getItems', function(data) {
             }).success(function(data) {
-                if (data.todo_items.length) {
+                if (data && data.todo_items && data.todo_items.length) {
                     dbStorage.todos = data.todo_items;
                     model.newEntry = false;
                 }
@@ -33,7 +33,7 @@ $(function() {
         },
 
         insertItems : function(data) {
-            console.log(data);
+           // console.log(data);
             $.ajax({
                 type : "POST",
                 contentType : 'application/json',
@@ -134,7 +134,7 @@ $(function() {
             });
 
             newTodoForm.keypress(function(e) {
-                if (e.which == 13) {
+                if ((e.which == 13) && (newTodoForm.val() !== "")) {
                     controller.addNewTodo(newTodoForm.val());
                     newTodoForm.val('');
                     e.preventDefault();
