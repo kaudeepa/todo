@@ -1,5 +1,19 @@
 # To-do List Application
 
+########################
+Dear Reader,
+This is my attempt at developing todomvc app with barebone jQuery. I worked on this application (with backbone.js) during a online JS course I took recently.
+So, this time I have written in with regular jQuery only but tried to stick with MVC paradigm as much as possible.
+Backend APIs are written in PHP for MySQL db with the help of Slim framework.
+
+Thanks for suggesting this exercise as I learned some new things while working on this. I was also hubmled by apache configs so got a better understanding of that too, as a side effect. In all, a great experience!
+I would love to get your feedback on how I could have made it even better. I am at [dkaushik@outlook.com]
+
+Best,
+Deepak
+########################
+
+ 
 ## Objective
 Given the supplied HTML and CSS files, develop the backend functionality for a database-backed todo list application.
 
